@@ -185,7 +185,7 @@ Watch the **video demonstration** of this project in action here:
 ## 🧪 Running Tests
 To run unit tests:
 ```sh
-npm run test
+npm test
 ```
 
 ---
@@ -194,7 +194,7 @@ npm run test
 1. **Fork** the repository  
 2. **Clone** it locally:  
    ```sh
-   git clone https://github.com/yourusername/bharat-fd-assignment.git
+   git clone https://github.com/mohammadamanpatel/Bharat-FD-Backend-Task
    ```
 3. **Create a feature branch**  
    ```sh
@@ -213,8 +213,7 @@ npm run test
 ---
 
 ## 🚀 Author
-👨‍💻 **[Your Name]**  
-🔗 [GitHub](https://github.com/yourusername)  
-📧 Email: your.email@example.com  
-
+👨‍💻 **Mohd Aman Naim Patel**  
+💻 **[LinkedIn]https://www.linkedin.com/in/mohd-aman-patel/**
+🔗 [GitHub](https://github.com/mohammadamanpate)  
 ---
