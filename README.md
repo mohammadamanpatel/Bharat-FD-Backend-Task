@@ -27,7 +27,7 @@ This project is a **FAQ Management API** that supports **multi-language translat
 ✅ **Multi-language Support** using `googletrans`  
 ✅ **CRUD operations** for FAQ management  
 ✅ **Redis caching** for better performance  
-✅ **Unit Testing** with Mocha & Chai  
+✅ **Unit Testing** with Mocha,Chai & SuperTest  
 ✅ **Mongoose ODM** for MongoDB interaction  
 
 ---
