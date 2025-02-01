@@ -178,7 +178,7 @@ For a detailed description of the API, including request and response formats, r
 
 ## **🎥 Video Demonstration**
 Watch the **video demonstration** of this project in action here:  
-[🎬 Video File (Google Drive)](https://www.postman.com/joint-operations-cosmologist-64352344/workspace/faqs-api-s/collection/30730048-7507c690-49b8-4a24-a3e2-ee16000e90c9?action=share&creator=30730048)
+[🎬 Video File (Google Drive)](https://drive.google.com/file/d/14rUwzarV5kxL3dq6oxfTfKvZFylWH74X/view?usp=sharing)
 
 ---
 
