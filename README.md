@@ -215,5 +215,4 @@ npm test
 ## 🚀 Author
 👨‍💻 Mohd Aman Naim Patel  
 💻 [LinkedIn]https://www.linkedin.com/in/mohd-aman-patel/
-🔗 [GitHub](https://github.com/mohammadamanpate)  
 ---
