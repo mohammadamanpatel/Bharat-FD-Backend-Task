@@ -1,4 +1,3 @@
-
 # 🌎 Bharat FD Assignment - FAQ Web App Backend with Multi-language Support 🚀
 
 ## 📌 Overview
@@ -14,6 +13,7 @@ This project is a **FAQ Management API** that supports **multi-language translat
 | **Express.js** | Web framework for handling API requests |
 | **MongoDB** | NoSQL database for storing FAQs |
 | **Mongoose** | ODM for MongoDB interaction |
+| **Json Web token** | JWT For authentication |
 | **Redis** | In-memory caching for performance optimization |
 | **googletrans** | Library for translating FAQs dynamically |
 | **Mocha & Chai** | Testing framework for API validation |
@@ -34,8 +34,9 @@ This project is a **FAQ Management API** that supports **multi-language translat
 |----------------------|--------------|
 | `config/Db.Connect.js` | MongoDB connection setup |
 | `config/RedisConfig.js` | Redis client setup for caching |
-| `controllers/FAQ.Controller.js` | Logic for handling FAQ requests |
-| `models/FAQModel.js` | Mongoose schema for FAQs |
+| `controllers/FAQ.Controller.js/USER.controller.js` | Logic for handling FAQ and user requests |
+| `middlewares/Auth.middleware.js/Role.middleware.js` | middlewares for authN and authZ |
+| `models/FAQModel.js/USERModel.js` | Mongoose schema for FAQs and users|
 | `routes/FAQ.routes.js` | Express routes for FAQ API |
 | `testing/Chai.js` | Unit tests using Mocha & Chai |
 | `Trans_Util/TransLate_Text.js` | Translation utility using `googletrans` |
@@ -67,23 +68,28 @@ This project is a **FAQ Management API** that supports **multi-language translat
 
 3️⃣ **Set up environment variables** (`.env` file)
    ```
-   MONGO_URI=your_mongodb_connection_string
-   REDIS_HOST=localhost
-   REDIS_PORT=6379
+    PORT = <your-port-no>
+    MONGO_URL = <your-mongo-url>
+    JWT_SECRET = <your-jwt-secret>
+    JWT_EXPIRY = <your-jwt-expiry>
+    COOKIE_MAX_AGE = <your-cookie-max-age>
+    REDIS_PASSWORD = <your-redis-insight-password>
+    REDIS_HOST = <your-redis-host>
+    REDIS_PORT = <your-redis-port>
    ```
 
 4️⃣ **Run the application**
    ```sh
    npm run dev
    ```
-   The server will start at `http://localhost:8080`
+   The server will start at `http://localhost:<your-port-no>`
 
 
 ## 🌐 API Endpoints
 
 ### 1️⃣ **Create a FAQ**
 ```http
-POST /Faqs/create-faq
+POST /api/Faqs/create-faq
 ```
 **Request Body:**
 ```json
@@ -108,7 +114,7 @@ POST /Faqs/create-faq
 
 ### 2️⃣ **Fetch FAQs (With Translations)**
 ```http
-GET /Faqs?targetLanguage=hi
+GET /api/Faqs?targetLanguage=hi
 ```
 ✅ **Response:**
 ```json
@@ -126,7 +132,7 @@ GET /Faqs?targetLanguage=hi
 
 ### 3️⃣ **Update a FAQ**
 ```http
-PUT /Faqs/:id
+PUT /api/Faqs/:id
 ```
 **Request Body:**
 ```json
@@ -151,7 +157,7 @@ PUT /Faqs/:id
 
 ### 4️⃣ **Delete a FAQ**
 ```http
-DELETE /Faqs/:id
+DELETE /api/Faqs/:id
 ```
 ✅ **Response:**
 ```json
