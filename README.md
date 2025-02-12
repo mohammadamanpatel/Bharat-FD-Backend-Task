@@ -1,4 +1,3 @@
----
 
 # 🌎 Bharat FD Assignment - FAQ Web App Backend with Multi-language Support 🚀
 
@@ -6,7 +5,6 @@
 
 This project is a **FAQ Management API** that supports **multi-language translations** using `googletrans`. It allows users to **create, read, update, and delete FAQs**, while providing real-time translations in different languages. The system uses **Redis caching** for optimized performance.
 
----
 
 ## 💡 Tech Stack
 
@@ -20,7 +18,6 @@ This project is a **FAQ Management API** that supports **multi-language translat
 | **googletrans** | Library for translating FAQs dynamically |
 | **Mocha & Chai** | Testing framework for API validation |
 
----
 
 ## 🏆 Features
 
@@ -30,7 +27,6 @@ This project is a **FAQ Management API** that supports **multi-language translat
 ✅ **Unit Testing** with Mocha,Chai & SuperTest  
 ✅ **Mongoose ODM** for MongoDB interaction  
 
----
 
 ## 🏗 Folder Structure
 
@@ -46,7 +42,6 @@ This project is a **FAQ Management API** that supports **multi-language translat
 | `.env` | Environment variables |
 | `server.js` | Main entry point of the application |
 
----
 
 ## ⚙️ Installation & Setup
 
@@ -83,7 +78,6 @@ This project is a **FAQ Management API** that supports **multi-language translat
    ```
    The server will start at `http://localhost:8080`
 
----
 
 ## 🌐 API Endpoints
 
@@ -111,7 +105,6 @@ POST /Faqs/create-faq
 }
 ```
 
----
 
 ### 2️⃣ **Fetch FAQs (With Translations)**
 ```http
@@ -130,7 +123,6 @@ GET /Faqs?targetLanguage=hi
 }
 ```
 
----
 
 ### 3️⃣ **Update a FAQ**
 ```http
@@ -180,7 +172,6 @@ For a detailed description of the API, including request and response formats, r
 Watch the **video demonstration** of this project in action here:  
 [🎬 Video File (Google Drive)](https://drive.google.com/file/d/14rUwzarV5kxL3dq6oxfTfKvZFylWH74X/view?usp=sharing)
 [🎬 Video File Updated (Google Drive)](https://drive.google.com/file/d/1ww4Jm6k87rVpNAdu_T7QCEupRG8R_v-t/view?usp=sharing)
----
 
 ## 🧪 Running Tests
 To run unit tests:
@@ -188,7 +179,6 @@ To run unit tests:
 npm test
 ```
 
----
 
 ## 🤝 Contributing
 1. **Fork** the repository  
@@ -210,11 +200,7 @@ npm test
    ```
 6. **Create a Pull Request** 🎉  
 
----
 
 ## 🚀 Author
 👨‍💻 Mohd Aman Naim Patel  
 💻 [LinkedIn](https://www.linkedin.com/in/mohd-aman-patel/)
----
-
----
