@@ -4,6 +4,7 @@ import { translateText } from "../Trans_Util/TransLate_Text.js";
 
 export const Create_FAQ = async (req, res) => {
   try {
+    console.log("req.body", req.body);
     const { question, answer, targetLanguage = "en" } = req.body;
 
     console.log("Creating FAQ with question:", question, "and answer:", answer);
