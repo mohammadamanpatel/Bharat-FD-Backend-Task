@@ -57,7 +57,7 @@ This project is a **FAQ Management API** that supports **multi-language translat
 
 1️⃣ **Clone the repository**
    ```sh
-   git clone https://github.com/yourusername/bharat-fd-assignment.git
+   git clone https://github.com/mohammadamanpatel/Bharat-FD-Backend-Task
    cd bharat-fd-assignment
    ```
 
