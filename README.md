@@ -96,39 +96,58 @@ POST /api/Faqs/create-faq
 {
   "question": "What is an API?",
   "answer": "An API is an endpoint used for communication between systems.",
-  "targetLanguage": "hi"
+  "translations": {
+    "hi": {},
+    "ur": {}
+  }
 }
 ```
 ✅ **Response:**
 ```json
 {
-  "message": "Faq Created Successfully",
-  "faq": {
-    "_id": "64b6a3d6e98f67a3d",
-    "question": "What is an API?",
-    "answer": "An API is an endpoint used for communication between systems."
-  }
+    "message": "FAQ Created Successfully",
+    "faq": {
+        "question": "What is an api",
+        "answer": "api is a endpoint",
+        "translations": {
+            "hi": {
+                "question": "एक एपीआई क्या है",
+                "answer": "एपीआई एक समापन बिंदु है",
+                "_id": "67b5b6118e31c7b65d54d2dd"
+            },
+            "ur": {
+                "question": "ایک API کیا ہے؟",
+                "answer": "API ایک اختتامی نقطہ ہے",
+                "_id": "67b5b6118e31c7b65d54d2de"
+            }
+        },
+        "_id": "67b5b6118e31c7b65d54d2dc",
+        "createdAt": "2025-02-19T10:44:33.046Z",
+        "updatedAt": "2025-02-19T10:44:33.046Z",
+        "__v": 0
+    }
 }
 ```
 
 
 ### 2️⃣ **Fetch FAQs (With Translations)**
 ```http
-GET /api/Faqs?targetLanguage=hi
+GET /api/Faqs?targetLanguage=ur
 ```
 ✅ **Response:**
 ```json
 {
-  "translatedFaqs": [
-    {
-      "_id": "64b6a3d6e98f67a3d",
-      "question": "एपीआई क्या है?",
-      "answer": "एपीआई सिस्टमों के बीच संचार के लिए एक एंडपॉइंट है।"
-    }
-  ]
+    "translatedFaqs": [
+        {
+            "_id": "67b5b6118e31c7b65d54d2dc",
+            "question": "ایک API کیا ہے؟",
+            "answer": "API ایک اختتامی نقطہ ہے",
+            "createdAt": "2025-02-19T10:44:33.046Z",
+            "updatedAt": "2025-02-19T10:44:33.046Z"
+        }
+    ]
 }
 ```
-
 
 ### 3️⃣ **Update a FAQ**
 ```http
@@ -137,23 +156,52 @@ PUT /api/Faqs/:id
 **Request Body:**
 ```json
 {
-  "question": "What is an API in detail?",
-  "answer": "An API is a set of protocols and tools for building software applications.",
-  "targetLanguage": "hi"
+    "question":"What are apis ?",
+    "answer":"Apis are endpoints",
+    "translations": {
+    "hi": {},
+    "ur": {},
+    "es":{},
+    "fr":{}
+  }
 }
 ```
 ✅ **Response:**
 ```json
 {
-  "message": "Successfully Updated Faq",
-  "UpdatedFAQ": {
-    "question": "What is an API in detail?",
-    "answer": "An API is a set of protocols and tools for building software applications."
-  }
+    "message": "Successfully Updated FAQ",
+    "updatedFAQ": {
+        "_id": "67b5b6118e31c7b65d54d2dc",
+        "question": "What are apis ?",
+        "answer": "Apis are endpoints",
+        "translations": {
+            "hi": {
+                "question": "एपीआई क्या हैं?",
+                "answer": "एपीआई समापन बिंदु हैं",
+                "_id": "67b5b6558e31c7b65d54d2e1"
+            },
+            "ur": {
+                "question": "APIs کیا ہیں؟",
+                "answer": "APIs اختتامی نکات ہیں",
+                "_id": "67b5b6558e31c7b65d54d2e2"
+            },
+            "es": {
+                "question": "¿Qué son las API?",
+                "answer": "Las API son puntos finales",
+                "_id": "67b5b6558e31c7b65d54d2e3"
+            },
+            "fr": {
+                "question": "Que sont les API?",
+                "answer": "Les API sont des points de terminaison",
+                "_id": "67b5b6558e31c7b65d54d2e4"
+            }
+        },
+        "createdAt": "2025-02-19T10:44:33.046Z",
+        "updatedAt": "2025-02-19T10:45:41.404Z",
+        "__v": 0
+    }
 }
 ```
-
-
 
 ### 4️⃣ **Delete a FAQ**
 ```http
@@ -166,11 +214,9 @@ DELETE /api/Faqs/:id
 }
 ```
 
-
 ## **📘 API Documentation**
 For a detailed description of the API, including request and response formats, refer to the full **API Documentation** here:  
 [📄 API Documentation (Postman)](https://www.postman.com/joint-operations-cosmologist-64352344/workspace/faqs-api-s/collection/30730048-7507c690-49b8-4a24-a3e2-ee16000e90c9?action=share&creator=30730048)
-
 
 
 ## **🎥 Video Demonstration**
@@ -184,7 +230,6 @@ To run unit tests:
 ```sh
 npm test
 ```
-
 
 ## 🤝 Contributing
 1. **Fork** the repository  
@@ -205,7 +250,6 @@ npm test
    git push origin new-feature
    ```
 6. **Create a Pull Request** 🎉  
-
 
 ## 🚀 Author
 👨‍💻 Mohd Aman Naim Patel  
